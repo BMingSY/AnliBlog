@@ -27,16 +27,38 @@ export default function Post({ post }) {
                 code({ className, children, ...props }) {
                   const match = /language-(\w+)/.exec(className || '');
                   const isInline = !match;
-                  return !isInline ? (
-                    <SyntaxHighlighter
-                      style={vscDarkPlus}
-                      language={match[1]}
-                      PreTag="div"
-                      {...props}
-                    >
-                      {String(children).replace(/\n$/, '')}
-                    </SyntaxHighlighter>
-                  ) : (
+                  if (!isInline) {
+                    return (
+                      <div className="code-block">
+                        <button
+                          className="code-copy-btn"
+                          onClick={(e) => {
+                            const text = String(children).replace(/\n$/, '');
+                            navigator.clipboard.writeText(text).then(() => {
+                              const btn = e.target;
+                              btn.textContent = '已复制!';
+                              btn.classList.add('copied');
+                              setTimeout(() => {
+                                btn.textContent = '复制';
+                                btn.classList.remove('copied');
+                              }, 1500);
+                            });
+                          }}
+                        >
+                          复制
+                        </button>
+                        <SyntaxHighlighter
+                          style={vscDarkPlus}
+                          language={match[1]}
+                          PreTag="div"
+                          {...props}
+                        >
+                          {String(children).replace(/\n$/, '')}
+                        </SyntaxHighlighter>
+                      </div>
+                    );
+                  }
+                  return (
                     <code className={className} {...props}>
                       {children}
                     </code>
