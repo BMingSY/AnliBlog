@@ -21,7 +21,7 @@ export default function Home({ posts }) {
                 <Link href={`/posts/${post.slug}`}>{post.title}</Link>
               </h2>
               <div className="post-meta">
-                {post.date}
+                {post.dateFormatted}
               </div>
               <p className="post-excerpt">{post.excerpt}</p>
             </article>

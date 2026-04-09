@@ -19,7 +19,7 @@ export default function Post({ post }) {
       <div className="container">
         <article className="post">
           <h1>{post.title}</h1>
-          <div className="post-meta">{post.date}</div>
+          <div className="post-meta">{post.dateFormatted}</div>
           <div className="markdown-content">
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}

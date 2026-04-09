@@ -1,6 +1,6 @@
 ---
 title: "Getting Started with Markdown"
-date: "2026-04-08"
+date: "2026-04-08T09:00:00"
 excerpt: "A quick guide to using Markdown for writing beautiful content on the web."
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Welcome to Anli's Blog"
-date: "2026-04-09"
+date: "2026-04-09T08:00:00"
 excerpt: "Welcome to my AI-powered blog, built with Next.js and powered by Qwen."
 ---
 
