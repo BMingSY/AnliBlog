@@ -21,10 +21,6 @@ yarn-error.log*
 # Local env files
 .env*.local
 
-# Draft posts
-posts/260409_dst.md
-posts/260410_Stellar_Blade.md
-
 # Personal config (contains sensitive info)
 site.config.js
 
