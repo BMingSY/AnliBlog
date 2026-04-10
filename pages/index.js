@@ -2,14 +2,15 @@ import Link from 'next/link';
 import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import siteConfig from '../site.config';
 import { getAllPosts } from '../lib/posts';
 
 export default function Home({ posts }) {
   return (
     <>
       <Head>
-        <title>Anli's Blog</title>
-        <meta name="description" content="A simple and clean blog" />
+        <title>{siteConfig.site.title}</title>
+        <meta name="description" content={siteConfig.site.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Header />

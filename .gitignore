@@ -20,3 +20,6 @@ yarn-error.log*
 
 # Local env files
 .env*.local
+
+# Draft posts
+posts/dst_260409.md

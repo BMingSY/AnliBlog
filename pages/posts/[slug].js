@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import siteConfig from '../../site.config';
 import { getAllPostSlugs, getPostBySlug } from '../../lib/posts';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -11,7 +12,7 @@ export default function Post({ post }) {
   return (
     <>
       <Head>
-        <title>{`${post.title} - Anli's Blog`}</title>
+        <title>{`${post.title} - ${siteConfig.site.title}`}</title>
         <meta name="description" content={post.excerpt} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>

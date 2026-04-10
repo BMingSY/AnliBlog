@@ -1,14 +1,19 @@
 import Link from 'next/link';
+import siteConfig from '../site.config';
 
 export default function Header() {
   return (
     <header className="header">
       <div className="container">
         <h1>
-          <Link href="/">Anli's Blog</Link>
+          <Link href="/">{siteConfig.site.title}</Link>
         </h1>
         <nav className="nav">
-          <Link href="/">Home</Link>
+          {siteConfig.nav.items.map((item) => (
+            <Link key={item.href} href={item.href}>
+              {item.label}
+            </Link>
+          ))}
         </nav>
       </div>
     </header>
