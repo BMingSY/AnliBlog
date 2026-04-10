@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Profile from '../components/Profile';
 import siteConfig from '../site.config';
 import { getAllPosts } from '../lib/posts';
 
@@ -14,8 +15,12 @@ export default function Home({ posts }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Header />
-      <div className="container">
-        <div className="post-list">
+      <div className="home-layout">
+        <aside className="home-sidebar">
+          <Profile />
+        </aside>
+        <main className="home-main">
+          <div className="post-list">
           {posts.map((post) => (
             <article key={post.slug} className="post-item">
               <h2>
@@ -28,6 +33,7 @@ export default function Home({ posts }) {
             </article>
           ))}
         </div>
+        </main>
       </div>
       <Footer />
     </>

@@ -22,4 +22,11 @@ yarn-error.log*
 .env*.local
 
 # Draft posts
-posts/dst_260409.md
+posts/260409_dst.md
+posts/260410_Stellar_Blade.md
+
+# Personal config (contains sensitive info)
+site.config.js
+
+# Avatar image
+public/avatar.png
