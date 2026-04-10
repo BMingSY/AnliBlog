@@ -20,3 +20,7 @@ yarn-error.log*
 
 # Local env files
 .env*.local
+
+# Personal files
+site.config.js
+public/avatar.png
